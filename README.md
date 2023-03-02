@@ -16,11 +16,14 @@
     - << : 구분 기호를 지정한 다음 구분 기호가 포함된 줄이 보일 때까지 입력을 읽어야 한다. (However, it doesn’t have to update the history!)
     - \>> : 추가 모드에서 출력을 리다이렉션
     
+
 - pipe(| 문자)를 구현
   파이프라인에서 각 명령의 출력은 파이프를 통해 다음 명령의 입력에 연결된다.
   
+
 - 환경 변수($ 뒤에 문자 시퀀스)를 처리
 - $? 는 가장 최근에 실행된 포그라운드 파이프라인의 종료 상태로 확장되어야 한다.
+
 
 - bash에서와 같이 작동해야 하는 ctrl-C, ctrl-D 및 ctrl-\를 처리
 - In interactive mode
@@ -31,18 +34,12 @@ ctrl-D 는 셸을 종료한다.
     - ctrl-\ does nothing.
 ctrl-\는 아무 작업도 수행하지 않는다.
 
+
 - builtin functions 구현
-    - echo with option -n
-옵션 -n이 있는 echo
-    - cd with only a relative or absolute path 
-    상대경로 혹은 절대경로로가 있는 cd
-    - pwd with no options
-    옵션 없는 pwd
-    - export with no options
-    export
-    - unset with no options
-    unset
-    - env with no options or arguments
-    옵션이나 인수가 없는 env
-    - exit with no options
-    옵션 없는 exit
+    - echo with option -n : 옵션 -n이 있는 echo
+  - cd with only a relative or absolute path : 상대경로 혹은 절대경로가 있는 cd
+  - pwd with no options : 옵션 없는 pwd
+  - export with no options
+  - unset with no options
+  - env with no options or arguments
+  - exit with no options
