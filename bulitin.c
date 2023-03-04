@@ -53,3 +53,30 @@ int	ft_cd(char **argv)
 	free(path);
 	return (0);
 }
+
+int	ft_pwd(void)
+{
+	char	*tmp;
+
+	tmp = getcwd(NULL, 0);
+	if (tmp == NULL)
+	{
+		perror("getcwd error");
+		free(tmp);
+		return (1);
+	}
+	printf("%s\n", tmp);
+	free(tmp);
+	return (0);
+}
+
+void	leaks(void)
+{
+	system("leaks a.out");
+}
+
+int	main(void)
+{
+	atexit(leaks);
+	ft_pwd();
+}
