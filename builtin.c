@@ -54,6 +54,33 @@ int	ft_cd(char **argv)
 	free(path);
 	return (0);
 }
+//
+//int	ft_export(char **argv)
+//{
+//}
+//
+//int	ft_env(char **argv)
+//{
+//}
+
+void	ft_exit(int argc, char **argv)
+{
+	int	tmp;
+
+	if (argc == 1)
+	{
+		printf("exit\n");
+		exit(0);
+	}
+	else if (argc > 2)
+		printf("exit: too many arguments\n");
+	else
+	{
+		tmp = ft_atoi(argv[1]);
+		printf("exit\n");
+		exit(tmp);
+	}
+}
 
 int	ft_pwd(void)
 {
@@ -71,11 +98,6 @@ int	ft_pwd(void)
 	return (0);
 }
 
-int	ft_export(char **argv)
-{
-
-}
-
 void	leaks(void)
 {
 	system("leaks ft_echo");
@@ -86,5 +108,4 @@ int	main(int argc, char **argv)
 	if (argc < 1)
 		return (1);
 	atexit(leaks);
-	ft_echo(argv);
 }
