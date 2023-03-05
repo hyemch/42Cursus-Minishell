@@ -8,4 +8,4 @@ include_directories(.
 
 add_executable(minishell
         minishell.h
-        bulitin.c)
+        builtin.c)

@@ -19,7 +19,8 @@ int	ft_echo(char **argv)
 
 	i = 1;
 	n = 0;
-	if (argv[1] && ft_strncmp(argv[1], "-n", 2) == 0)
+	if (argv[1] && ft_strncmp(argv[1], "-n", 2) == 0 \
+	&& (ft_strncmp(argv[1], "-n-", 3) != 0))
 	{
 		n = 1;
 		i++;
@@ -70,13 +71,20 @@ int	ft_pwd(void)
 	return (0);
 }
 
+//int	ft_export(char **argv)
+//{
+//
+//}
+
 void	leaks(void)
 {
-	system("leaks a.out");
+	system("leaks ft_echo");
 }
 
-int	main(void)
+int	main(int argc, char **argv)
 {
+	if (argc < 1)
+		return (1);
 	atexit(leaks);
-	ft_pwd();
+	ft_echo(argv);
 }
