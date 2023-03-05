@@ -71,10 +71,10 @@ int	ft_pwd(void)
 	return (0);
 }
 
-//int	ft_export(char **argv)
-//{
-//
-//}
+int	ft_export(char **argv)
+{
+
+}
 
 void	leaks(void)
 {

@@ -1,3 +1,0 @@
-/goinfre/hyecheon/minishell/cmake-build-debug/CMakeFiles/minishell.dir
-/goinfre/hyecheon/minishell/cmake-build-debug/CMakeFiles/edit_cache.dir
-/goinfre/hyecheon/minishell/cmake-build-debug/CMakeFiles/rebuild_cache.dir
