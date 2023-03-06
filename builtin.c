@@ -54,11 +54,35 @@ int	ft_cd(char **argv)
 	free(path);
 	return (0);
 }
-//
-//int	ft_export(char **argv)
-//{
-//}
-//
+
+	//1. export만 들어온경우 -> 모든 환경변수 출력
+	//2. export 변수이름=값
+int	ft_export(int argc, char **argv)
+{
+	t_env	*env;
+	int		i;
+	char	*env_name;
+	char	*env_value;
+
+	i = 1;
+	if (argc == 1)
+	{
+		env_name = env->name;
+		env_value = env->value;
+		while (env->next != NULL)
+		{
+			printf("declare -x %s=\"%s\"\n", env_name, env_value);
+			env_name = env->name->next;
+			env_value = env->value->next;
+		}
+	}
+	while (argv[i] != NULL)
+	{
+		argv[i] == env_name;
+		argv[i + 1]
+	}
+}
+
 //int	ft_env(char **argv)
 //{
 //}
